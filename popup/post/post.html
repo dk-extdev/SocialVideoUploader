@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>TaskCrusher</title>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Taskcrusher</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="settings" href="../authentication/authentication.html">Settings</a></li>
+                <li><a class="logout-button" href="#">Logout</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<form class="form-horizontal" id="upwork-form">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Post to Upwork</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="title">Title</label>
+            <div class="col-md-4">
+                <input id="title" name="title" type="text" placeholder="My Project" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="job_type">Job Type</label>
+            <div class="col-md-4">
+                <select id="job_type" name="job_type" class="form-control">
+                    <option value="hourly">Hourly</option>
+                    <option value="fixed_price">Fixed Price</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="visibility">Visibility</label>
+            <div class="col-md-4">
+                <select id="visibility" name="visibility" class="form-control">
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                    <option value="odesk">Upwork Logged In Users</option>
+                    <option value="invite-only">Invite Only</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="category2">Category</label>
+            <div class="col-md-4">
+                <select id="category2" name="category2" class="form-control">
+                    <option value="web-development">Web Development</option>
+                    <option value="design">Design</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="subcategory2">Subcategory</label>
+            <div class="col-md-4">
+                <select id="subcategory2" name="subcategory2" class="form-control">
+                    <option value="web-and-mobile-development">Web &amp; Mobile Development</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="start_date">Start Date</label>
+            <div class="col-md-4">
+                <input id="start_date" name="start_date" type="text" placeholder="MM/DD/YYYY" class="form-control input-md">
+                <span class="help-block">Leave it blank if job starts right away</span>
+            </div>
+        </div>
+
+        <!-- Prepended text-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="budget">Budget</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input id="budget" name="budget" class="form-control" placeholder="9,999.99" type="text">
+                </div>
+                <p class="help-block">Budget in US Dollars</p>
+            </div>
+        </div>
+
+        <!-- Appended Input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="duration">Duration</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="duration" name="duration" class="form-control" placeholder="10" type="text">
+                    <span class="input-group-addon">Hours</span>
+                </div>
+                <p class="help-block">Duration in hours</p>
+            </div>
+        </div>
+        <!-- Textarea -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">Description</label>
+            <div class="col-md-4">
+                <textarea class="form-control" id="description" name="description">Describe your project</textarea>
+            </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-success">Post to upwork</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+
+
+</body>
+<script src="../../js/jquery-2.2.3.min.js"></script>
+<script type="application/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="application/javascript" src="../../js/trello/client.js"></script>
+<script type="application/javascript" src="../global.js"></script>
+<script type="application/javascript" src="post.js"></script>
+</html>

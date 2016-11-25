@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>TaskCrusher</title>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Taskcrusher</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="logout-button" href="#">Logout</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Settings</h3>
+    </div>
+    <div class="panel-body">
+        <a href="#" id="trello-connect" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Connect with Trello</a>
+        <div id="trello-explanation" class="panel" style="display: none">
+            <form id="trello-auth-form" action="" method="post" role="form">
+                Ok, this is going to be easy:
+                <ul>
+                    <li>When you finish reading this, click the "Take me to Trello" Button</li>
+                    <li>We are going to direct you to a Trello link asking for authorization to work with your Trello account</li>
+                    <li>Click on "Allow" if you agree</li>
+                    <li>After that you will see a key that looks like this: <b>b87c4ajrcb90fa83c7d74675cadc38d2c</b></li>
+                    <li>Copy your key, paste it here and click on "Authorize"</li>
+                </ul>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="text" name="trelloToken" id="trello-token" tabindex="1" class="form-control" placeholder="b87c4ajrcb90fa83c7d74675cadc38d2c" value="">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <a href="#" id="trello-authenticate" class="form-control btn btn-primary margin-bottom-5"><span class="glyphicon glyphicon-link"></span> Take me to Trello</a>
+                        </div><div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="trello-authorize" id="trello-authorize" tabindex="4" class="form-control btn btn-success" value="Authorize">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <a href="#" id="upwork-connect" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Connect with Upwork</a>
+    </div>
+</div>
+
+
+
+</body>
+<script src="../../js/jquery-2.2.3.min.js"></script>
+<script type="application/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="application/javascript" src="../../js/trello/client.js"></script>
+<script type="application/javascript" src="../../js/notifyjs/notify.min.js"></script>
+<script type="application/javascript" src="../global.js"></script>
+<script type="application/javascript" src="authentication.js"></script>
+</html>
