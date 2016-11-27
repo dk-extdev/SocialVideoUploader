@@ -1,8 +1,5 @@
-// Global constants
 
 var DOMAIN = "http://127.0.0.1:8000/";
-
-// Global functions
 
 function getFormData($form){
     var unindexed_array = $form.serializeArray();
@@ -67,9 +64,6 @@ var getToken = function(callback) {
 };
 
 var redirect = function(url) {
-    /*chrome.browserAction.setPopup({
-        popup: "popup/" + url
-    });*/
     window.location.href = url;
 };
 
@@ -127,7 +121,6 @@ var request = function(api, data, beforeSend, success, error, requestType, authe
             }
         };
 
-        // get Authentication Token
         getToken(callback);
     } else {
         ajaxRequest(api, data, beforeSend, success, error, requestType, authenticate);
